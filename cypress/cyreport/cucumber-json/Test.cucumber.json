@@ -1,0 +1,32 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Test Feature",
+    "line": 1,
+    "id": "test-feature",
+    "tags": [],
+    "uri": "Test.feature",
+    "elements": [
+      {
+        "id": "test-feature;test-scenario",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Test Scenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User is in home page",
+            "result": {
+              "status": "passed",
+              "duration": 1027000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
