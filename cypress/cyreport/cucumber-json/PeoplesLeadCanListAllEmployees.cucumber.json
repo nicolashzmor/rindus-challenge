@@ -1,0 +1,324 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Peoples Lead Can List All Employees",
+    "line": 1,
+    "id": "peoples-lead-can-list-all-employees",
+    "tags": [],
+    "uri": "PeoplesLeadCanListAllEmployees.feature",
+    "elements": [
+      {
+        "id": "peoples-lead-can-list-all-employees;user-sees-all-registered-employees",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User sees all registered employees",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position",
+                      "date_of_birth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "help desk",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "product manager",
+                      "1987-09-29"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the below employees are registered",
+            "result": {
+              "status": "passed",
+              "duration": 20421000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I navigate to EmployeesList",
+            "result": {
+              "status": "undefined",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I see the belows employees in the list",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "peoples-lead-can-list-all-employees;user-searches-employees-by-full-name",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "User searches employees by full name",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position",
+                      "date_of_birth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "help desk",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "product manager",
+                      "1987-09-29"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the below employees are registered",
+            "result": {
+              "status": "passed",
+              "duration": 26000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I navigate to EmployeesList",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I search \"Nol\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I see employee \"Eve Nolan\" on screen",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "peoples-lead-can-list-all-employees;user-searches-employees-by-work-position",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "User searches employees by work position",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position",
+                      "date_of_birth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "help desk",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "product manager",
+                      "1987-09-29"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the below employees are registered",
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I navigate to EmployeesList",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I search \"full-stack\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I see employee \"Eve Nolan\" on screen",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I see employee \"Greg Ebert\" on screen",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

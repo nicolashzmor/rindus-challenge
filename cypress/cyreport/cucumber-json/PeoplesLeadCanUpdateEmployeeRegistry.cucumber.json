@@ -1,0 +1,30 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Peoples Lead Can Update Employee's Registry",
+    "line": 1,
+    "id": "peoples-lead-can-update-employee's-registry",
+    "tags": [],
+    "uri": "PeoplesLeadCanUpdateEmployeeRegistry.feature",
+    "elements": [
+      {
+        "id": "peoples-lead-can-update-employee's-registry;user-changes-the-name-of-an-existing-employee",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User changes the name of an existing Employee",
+        "tags": [],
+        "type": "scenario",
+        "steps": []
+      },
+      {
+        "id": "peoples-lead-can-update-employee's-registry;user-changes-the-work-position-of-an-existing-employee",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "User changes the work position of an existing Employee",
+        "tags": [],
+        "type": "scenario",
+        "steps": []
+      }
+    ]
+  }
+]

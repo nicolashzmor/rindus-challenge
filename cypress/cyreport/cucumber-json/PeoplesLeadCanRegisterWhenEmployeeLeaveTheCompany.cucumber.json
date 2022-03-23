@@ -1,0 +1,292 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Peoples Lead Can Register When an Employee Leaves The Company",
+    "line": 1,
+    "id": "peoples-lead-can-register-when-an-employee-leaves-the-company",
+    "tags": [],
+    "uri": "PeoplesLeadCanRegisterWhenEmployeeLeaveTheCompany.feature",
+    "elements": [
+      {
+        "id": "peoples-lead-can-register-when-an-employee-leaves-the-company;user-removes-an-employee-from-the-employee's-list",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "User removes an employee from the employee's list",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position",
+                      "date_of_birth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "help desk",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "product manager",
+                      "1987-09-29"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the below employees are registered",
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I navigate to EmployeesList",
+            "result": {
+              "status": "passed",
+              "duration": 157000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I remove the 1st user on the list",
+            "result": {
+              "status": "failed",
+              "duration": 4007000000,
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-e2e-id=employees-list__actions-menu]`, but never found it.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanRegisterWhenEmployeeLeaveTheCompany.feature:71:8)\n    at Context.resolveAndRunStepDefinition (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanRegisterWhenEmployeeLeaveTheCompany.feature:11077:29)\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanRegisterWhenEmployeeLeaveTheCompany.feature:10398:35)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Confirm Remove Operation by Input User's Name: \"Eve Nolan\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I see the belows employees in the list",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "peoples-lead-can-register-when-an-employee-leaves-the-company;user-is-about-to-remove-the-wrong-employee",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "User is about to remove the wrong employee",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position",
+                      "date_of_birth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "full-stack developer",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "help desk",
+                      "1987-09-29"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "product manager",
+                      "1987-09-29"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the below employees are registered",
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I navigate to EmployeesList",
+            "result": {
+              "status": "passed",
+              "duration": 176000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I remove the 1st user on the list",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-e2e-id=employees-list__actions-menu]`, but never found it.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanRegisterWhenEmployeeLeaveTheCompany.feature:71:8)\n    at Context.resolveAndRunStepDefinition (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanRegisterWhenEmployeeLeaveTheCompany.feature:11077:29)\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanRegisterWhenEmployeeLeaveTheCompany.feature:10398:35)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "Confirm Remove Operation by Input User's Name: \"Greg Ebert\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I see the error 'User \"Eve Nolan\" was not removed'",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I see the belows employees in the list",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
