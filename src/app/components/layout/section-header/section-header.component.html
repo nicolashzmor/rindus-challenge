@@ -1,0 +1,7 @@
+<h2>
+  <a *ngIf="!disableBackButton" aria-label="Go Back" [routerLink]="back">
+    <tui-svg src="tuiIconChevronLeft"></tui-svg>
+  </a>
+  <span>{{title}}</span>
+</h2>
+<ng-content></ng-content>

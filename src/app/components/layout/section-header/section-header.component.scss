@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  a {
+    color: inherit;
+  }
+  tui-svg {
+    width: 36px;
+    height: 36px;
+    font-size: 1em;
+  }
+}

@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
 import {TuiSvgModule} from "@taiga-ui/core";
+import { SectionHeaderComponent } from './section-header/section-header.component';
+import {RouterModule} from "@angular/router";
 
 
 
 @NgModule({
     declarations: [
-        HeaderComponent
+        MainHeaderComponent,
+        SectionHeaderComponent
     ],
-    exports: [
-        HeaderComponent
-    ],
+  exports: [
+    MainHeaderComponent,
+    SectionHeaderComponent
+  ],
   imports: [
     CommonModule,
-    TuiSvgModule
+    TuiSvgModule,
+    RouterModule
   ]
 })
 export class LayoutModule { }
