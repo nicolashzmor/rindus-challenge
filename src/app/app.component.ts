@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Store} from "@ngxs/store";
 import {EmployeesActions} from "./core/store/employees/employees.actions";
-import FetchEmployees = EmployeesActions.FetchEmployees;
+import InitializeEmployees = EmployeesActions.InitializeEmployees;
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.store.dispatch(FetchEmployees)
+    this.store.dispatch(InitializeEmployees)
   }
 }

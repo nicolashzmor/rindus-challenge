@@ -1,6 +1,10 @@
 import {Employee} from "../../models/employee.model";
 
 export namespace EmployeesActions {
+  export class InitializeEmployees {
+    public static type = '[EMPLOYEES] Initialize Employees'
+  }
+
   export class FetchEmployees {
     // THIS WON'T FO ANYTHING AS ALL STAT IS MANAGED LOCALLY
     public static type = '[EMPLOYEES] Fetch Employees'

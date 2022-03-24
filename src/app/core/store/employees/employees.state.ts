@@ -18,6 +18,7 @@ import SignOffEmployeeSucceeded = EmployeesEvents.SignOffEmployeeSucceeded;
 import SignOffEmployeeFailed = EmployeesEvents.SignOffEmployeeFailed;
 import FetchEmployees = EmployeesActions.FetchEmployees;
 import UpdateFilterBy = EmployeesActions.UpdateFilterBy;
+import InitializeEmployees = EmployeesActions.InitializeEmployees;
 
 @State<EmployeesModels.State>({
   name: 'employees',
@@ -30,6 +31,14 @@ import UpdateFilterBy = EmployeesActions.UpdateFilterBy;
 export class EmployeesState {
 
   constructor(protected employees: EmployeesService) {
+  }
+
+  @Action(InitializeEmployees)
+  onInitializeEmployees(ctx: StateContext<EmployeesModels.State>) {
+    if (!ctx.getState().employees.length) {
+      return ctx.dispatch(FetchEmployees)
+    }
+    return true;
   }
 
   @Action(FetchEmployees)
@@ -63,8 +72,15 @@ export class EmployeesState {
   onUpdateEmployeeData(ctx: StateContext<EmployeesModels.State>, {employee}: UpdateEmployeeData) {
     try {
       const employeeDTO = employee.asUpdateDTO()
+      const employeeIndex = ctx.getState().employees.findIndex((e) => e.id === employee.id)
+
+      //
       return this.employees.updateEmployeeData(employeeDTO).pipe(
-        tap(employee => ctx.patchState({employees: [...ctx.getState().employees.filter(e => e.id !== employee.id), employee]})),
+        tap(employee => {
+          const employees = ctx.getState().employees
+          employees.splice(employeeIndex, 1, employee)
+          ctx.patchState({employees: employees})
+        }),
         concatMap(() => ctx.dispatch(UpdateEmployeeDataSucceeded)),
         // concatMap(() => ctx.dispatch(FetchEmployees)),
         catchError(() => ctx.dispatch(UpdateEmployeeDataFailed))
