@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  box-shadow: 0 4px 10px -6px #9B9D9E;
+  header {
+
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    tui-svg {
+      height: 32px;
+      width: auto;
+    }
+  }
+
+}
