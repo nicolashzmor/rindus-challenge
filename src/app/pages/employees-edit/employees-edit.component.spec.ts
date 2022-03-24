@@ -7,6 +7,8 @@ import {TuiNotificationsService} from "@taiga-ui/core";
 import {Employee} from "../../core/models/employee.model";
 import MockedFn = jest.MockedFn;
 import {Subject} from "rxjs";
+import {EmployeesActions} from "../../core/store/employees/employees.actions";
+import UpdateEmployeeData = EmployeesActions.UpdateEmployeeData;
 
 describe('EmployeesEditComponent', () => {
   let result: RenderResult<EmployeesEditComponent>
@@ -26,13 +28,14 @@ describe('EmployeesEditComponent', () => {
     expect(result.fixture.componentInstance).toBeTruthy()
   })
   it('should dispatch store action to update', () => {
-    result.fixture.componentInstance.updateEmployee(Employee.new({
+    const employee = Employee.new({
       id: '5aec6c1a-29d3-4baf-bb8b-baa91387fe10',
       name: 'Eve',
       surname: 'Nolan',
       work_position: 'full-stack developer',
       date_of_birth: '1987-09-29T00:00:00.000Z',
-    }))
-    expect(storeDispatcher).toHaveBeenCalled()
+    })
+    result.fixture.componentInstance.updateEmployee(employee)
+    expect(storeDispatcher).toHaveBeenCalledWith(new UpdateEmployeeData(employee))
   })
 });
