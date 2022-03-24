@@ -1,6 +1,9 @@
 @custom-parameters
 Feature: Peoples Lead Can Hire New Employee
 
+  Background:
+    Given I navigate to Homepage
+
   Scenario Outline: User adds a new hired employee
     Given I am adding a new employee
     When I input the employee's name: <name>
@@ -11,19 +14,11 @@ Feature: Peoples Lead Can Hire New Employee
     Then I see employee "<name> <surname>" on screen
 
     Examples:
-      | name    | surname | work_position        | date_of_birth |
-      | Eve     | Nolan   | full-stack developer | 29.09.1987    |
-      | Greg    | Ebert   | full-stack developer | 29.09.1987    |
-      | Harvey  | Walker  | help desk            | 29.09.1987    |
-      | Estelle | Sauer   | product manager      | 29.09.1987    |
-
-
-  Scenario: User sees an error in the data sheet, and want to cancel the process before finishing
-    Given I am adding a new employee
-    When I input the employee's name: Jeff
-    And I input the employee's surname: Fernand
-    And Cancel employee sign-up
-    Then I am on EmployeesList
+      | name   | surname | work_position        | date_of_birth |
+      | Roger  | Nolan   | Full-Stack Developer | 29.09.1987    |
+      | Prenz  | Ebert   | Full-Stack Developer | 29.09.1987    |
+      | Hinz   | Walker  | Help Desk            | 29.09.1987    |
+      | George | Sauer   | Product Manager      | 29.09.1987    |
 
 
 

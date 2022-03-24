@@ -4,7 +4,7 @@
       Name<sup>*</sup>
       <tui-input formControlName="name" [tuiTextfieldLabelOutside]="true">
         Type Employee's Name
-        <input tuiTextfield type="text">
+        <input data-e2e-id="new-employee__form-field__name" tuiTextfield type="text">
       </tui-input>
       <tui-error
         formControlName="name"
@@ -15,7 +15,7 @@
       Surname<sup>*</sup>
       <tui-input formControlName="surname" [tuiTextfieldLabelOutside]="true">
         Type Employee's Surname
-        <input tuiTextfield type="text">
+        <input data-e2e-id="new-employee__form-field__surname" tuiTextfield type="text">
       </tui-input>
       <tui-error
         formControlName="surname"
@@ -26,7 +26,7 @@
       Work Position<sup>*</sup>
       <tui-select formControlName="work_position" [tuiTextfieldLabelOutside]="true">
         Select Work Position
-        <input tuiTextfield type="text">
+        <input data-e2e-id="new-employee__form-field__work_position" tuiTextfield type="text">
         <ng-template tuiDataList>
           <tui-data-list>
             <button *ngFor="let optionEntry of WorkPositionOptions" tuiOption
@@ -43,12 +43,13 @@
       Date of Birth<sup>*</sup>
       <tui-input-date formControlName="date_of_birth" [tuiTextfieldLabelOutside]="true">
         Select Employee's Date of Birth
+        <input data-e2e-id="new-employee__form-field__date_of_birth" tuiTextfield type="text">
       </tui-input-date>
       <tui-error
         formControlName="date_of_birth"
         [error]="[] | tuiFieldError | async"
       ></tui-error>
     </label>
-    <button (click)="onSubmitEmployee()" tuiButton type="submit">{{submitLabel}}</button>
+    <button data-e2e-id=new-employee__submit-button (click)="onSubmitEmployee()" tuiButton type="submit">{{submitLabel}}</button>
   </form>
 </tui-island>

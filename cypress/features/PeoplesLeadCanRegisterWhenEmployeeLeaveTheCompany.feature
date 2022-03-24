@@ -23,7 +23,6 @@ Feature: Peoples Lead Can Register When an Employee Leaves The Company
     Given I navigate to EmployeesList
     When I remove the 1st user on the list
     And Confirm Remove Operation by Input User's Name: "Greg Ebert"
-    Then I see the error 'User "Eve Nolan" was not removed'
     And I see the belows employees in the list
       | name    | surname |
       | Eve     | Nolan   |

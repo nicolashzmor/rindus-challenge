@@ -8,7 +8,7 @@
   </tr>
   </thead>
   <tbody tuiTbody [data]="employees">
-  <tr data-testid="table__row" *tuiRow="let employee of employees; let employee_index = index" tuiTr>
+  <tr data-e2e-id="employees-list__employee" data-testid="table__row" *tuiRow="let employee of employees; let employee_index = index" tuiTr>
     <td *tuiCell="'full_name'" tuiTd>{{ employee.full_name }}</td>
     <td *tuiCell="'work_position'" tuiTd>
       <app-work-position-table-label [position]="employee.work_position"></app-work-position-table-label>
@@ -18,16 +18,22 @@
     </td>
     <td class="table__column--actions" *tuiCell="'actions'" tuiTd>
       <tui-hosted-dropdown [content]="actions">
-        <button appearance="icon" size="s" shape="rounded" tuiIconButton icon="tuiIconMoreHorLarge"></button>
+        <button
+          data-e2e-id="employees-list__actions-menu"
+          appearance="icon" size="s" shape="rounded" tuiIconButton icon="tuiIconMoreHorLarge"></button>
         <ng-template #actions>
           <tui-data-list class="table-actions-menu">
-            <button tuiOption class="table-actions-menu__option" [routerLink]="['/employees', employee.id]">
+            <button
+              data-e2e-id="employees-list__actions-menu__edit-employee"
+              tuiOption class="table-actions-menu__option" [routerLink]="['/employees', employee.id]">
               <tui-svg src="tuiIconEditLarge"></tui-svg>
               Edit
             </button>
-            <button tuiOption class="table-actions-menu__option" (click)="requestSignOfEmployee(employee)">
+            <button
+              data-e2e-id="employees-list__actions-menu__remove-employee"
+              tuiOption class="table-actions-menu__option" (click)="requestSignOfEmployee(employee)">
               <tui-svg src="tuiIconTrashLarge"></tui-svg>
-              Delete
+              Sign Off
             </button>
           </tui-data-list>
         </ng-template>

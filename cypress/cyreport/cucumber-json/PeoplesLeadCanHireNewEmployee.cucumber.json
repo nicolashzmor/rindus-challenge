@@ -2,82 +2,107 @@
   {
     "keyword": "Feature",
     "name": "Peoples Lead Can Hire New Employee",
-    "line": 1,
+    "line": 2,
     "id": "peoples-lead-can-hire-new-employee",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@custom-parameters",
+        "line": 1
+      }
+    ],
     "uri": "PeoplesLeadCanHireNewEmployee.feature",
     "elements": [
       {
         "id": "peoples-lead-can-hire-new-employee;user-adds-a-new-hired-employee",
         "keyword": "Scenario",
-        "line": 14,
+        "line": 18,
         "name": "User adds a new hired employee",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@custom-parameters",
+            "line": 1
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
+            "name": "I navigate to Homepage",
+            "result": {
+              "status": "passed",
+              "duration": 1191000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
             "name": "I am adding a new employee",
             "result": {
-              "status": "failed",
-              "duration": 4281000000,
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=button__add-new-employee`, but never found it.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:30:8)\n    at Context.resolveAndRunStepDefinition (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:11038:29)\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:10359:35)"
+              "status": "passed",
+              "duration": 170000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
-            "name": "I input the employee's name: Eve",
+            "line": 9,
+            "name": "I input the employee's name: Roger",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 321000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 6,
+            "line": 10,
             "name": "I input the employee's surname: Nolan",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 334000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 7,
-            "name": "I select the employee's work_position: full-stack developer",
+            "line": 11,
+            "name": "I select the employee's work_position: Full-Stack Developer",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 483000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
-            "name": "I input the employee's date_of_birth: 1987-09-29",
+            "line": 12,
+            "name": "I input the employee's date_of_birth: 29.09.1987",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 473000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
+            "line": 13,
             "name": "Submit employee",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 181000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "I see employee \"Eve Nolan\" on screen",
+            "line": 14,
+            "name": "I see employee \"Roger Nolan\" on screen",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 11000000
             }
           }
         ]
@@ -85,277 +110,284 @@
       {
         "id": "peoples-lead-can-hire-new-employee;user-adds-a-new-hired-employee",
         "keyword": "Scenario",
-        "line": 15,
+        "line": 19,
         "name": "User adds a new hired employee",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@custom-parameters",
+            "line": 1
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
+            "name": "I navigate to Homepage",
+            "result": {
+              "status": "passed",
+              "duration": 283000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
             "name": "I am adding a new employee",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=button__add-new-employee`, but never found it.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:30:8)\n    at Context.resolveAndRunStepDefinition (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:11038:29)\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:10359:35)"
+              "status": "passed",
+              "duration": 143000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
-            "name": "I input the employee's name: Greg",
+            "line": 9,
+            "name": "I input the employee's name: Prenz",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 326000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 6,
+            "line": 10,
             "name": "I input the employee's surname: Ebert",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 333000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 7,
-            "name": "I select the employee's work_position: full-stack developer",
+            "line": 11,
+            "name": "I select the employee's work_position: Full-Stack Developer",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 482000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
-            "name": "I input the employee's date_of_birth: 1987-09-29",
+            "line": 12,
+            "name": "I input the employee's date_of_birth: 29.09.1987",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 475000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
+            "line": 13,
             "name": "Submit employee",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 184000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 10,
-            "name": "I see employee \"Greg Ebert\" on screen",
+            "line": 14,
+            "name": "I see employee \"Prenz Ebert\" on screen",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 11000000
             }
           }
         ]
       },
       {
         "id": "peoples-lead-can-hire-new-employee;user-adds-a-new-hired-employee",
-        "keyword": "Scenario",
-        "line": 16,
-        "name": "User adds a new hired employee",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I am adding a new employee",
-            "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=button__add-new-employee`, but never found it.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:30:8)\n    at Context.resolveAndRunStepDefinition (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:11038:29)\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:10359:35)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "I input the employee's name: Harvey",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "I input the employee's surname: Walker",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "I select the employee's work_position: help desk",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "I input the employee's date_of_birth: 1987-09-29",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "Submit employee",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "I see employee \"Harvey Walker\" on screen",
-            "result": {
-              "status": "skipped"
-            }
-          }
-        ]
-      },
-      {
-        "id": "peoples-lead-can-hire-new-employee;user-adds-a-new-hired-employee",
-        "keyword": "Scenario",
-        "line": 17,
-        "name": "User adds a new hired employee",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I am adding a new employee",
-            "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=button__add-new-employee`, but never found it.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:30:8)\n    at Context.resolveAndRunStepDefinition (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:11038:29)\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:10359:35)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "I input the employee's name: Estelle",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "I input the employee's surname: Sauer",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "I select the employee's work_position: product manager",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "I input the employee's date_of_birth: 1987-09-29",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "Submit employee",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "I see employee \"Estelle Sauer\" on screen",
-            "result": {
-              "status": "skipped"
-            }
-          }
-        ]
-      },
-      {
-        "id": "peoples-lead-can-hire-new-employee;user-sees-an-error-in-the-data-sheet,-and-want-to-cancel-the-process-before-finishing",
         "keyword": "Scenario",
         "line": 20,
-        "name": "User sees an error in the data sheet, and want to cancel the process before finishing",
-        "tags": [],
+        "name": "User adds a new hired employee",
+        "tags": [
+          {
+            "name": "@custom-parameters",
+            "line": 1
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 21,
+            "line": 5,
+            "name": "I navigate to Homepage",
+            "result": {
+              "status": "passed",
+              "duration": 266000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
             "name": "I am adding a new employee",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=button__add-new-employee`, but never found it.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:30:8)\n    at Context.resolveAndRunStepDefinition (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:11038:29)\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/features/PeoplesLeadCanHireNewEmployee.feature:10359:35)"
+              "status": "passed",
+              "duration": 146000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 22,
-            "name": "I input the employee's name: Jeff",
+            "line": 9,
+            "name": "I input the employee's name: Hinz",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 303000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 23,
-            "name": "I input the employee's surname: Fernand",
+            "line": 10,
+            "name": "I input the employee's surname: Walker",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 350000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 24,
-            "name": "Cancel employee sign-up",
+            "line": 11,
+            "name": "I select the employee's work_position: Help Desk",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 469000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I input the employee's date_of_birth: 29.09.1987",
+            "result": {
+              "status": "passed",
+              "duration": 463000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Submit employee",
+            "result": {
+              "status": "passed",
+              "duration": 176000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 25,
-            "name": "I am on Employee",
+            "line": 14,
+            "name": "I see employee \"Hinz Walker\" on screen",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "peoples-lead-can-hire-new-employee;user-adds-a-new-hired-employee",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "User adds a new hired employee",
+        "tags": [
+          {
+            "name": "@custom-parameters",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to Homepage",
+            "result": {
+              "status": "passed",
+              "duration": 261000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am adding a new employee",
+            "result": {
+              "status": "passed",
+              "duration": 144000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I input the employee's name: George",
+            "result": {
+              "status": "passed",
+              "duration": 330000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I input the employee's surname: Sauer",
+            "result": {
+              "status": "passed",
+              "duration": 327000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I select the employee's work_position: Product Manager",
+            "result": {
+              "status": "passed",
+              "duration": 470000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I input the employee's date_of_birth: 29.09.1987",
+            "result": {
+              "status": "passed",
+              "duration": 452000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "Submit employee",
+            "result": {
+              "status": "passed",
+              "duration": 175000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I see employee \"George Sauer\" on screen",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
             }
           }
         ]

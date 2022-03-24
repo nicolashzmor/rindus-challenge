@@ -9,13 +9,15 @@
     Please, type <em>{{employee.full_name}}</em> to confirm sign-off
     <tui-input [formControl]="verification" [tuiTextfieldLabelOutside]="true" tuiTextfieldSize="m">
       Type employee's name
-      <input tuiTextfield type="text" placeholder="Type employee's name">
+      <input data-e2e-id="employees-list__removal-confirm__name-input" tuiTextfield type="text" placeholder="Type employee's name">
     </tui-input>
   </label>
 </section>
 
 <section class="sign-off-section sign-off-section__submit">
-  <button (click)="submitSignOff()" tuiButton size="m">Sign-off Employee</button>
+  <button
+    data-e2e-id="employees-list__removal-confirm__button"
+    (click)="submitSignOff()" tuiButton size="m">Sign-off Employee</button>
 </section>
 
 

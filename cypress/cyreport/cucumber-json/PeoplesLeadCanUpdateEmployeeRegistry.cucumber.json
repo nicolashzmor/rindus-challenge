@@ -10,20 +10,312 @@
       {
         "id": "peoples-lead-can-update-employee's-registry;user-changes-the-name-of-an-existing-employee",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 11,
         "name": "User changes the name of an existing Employee",
         "tags": [],
         "type": "scenario",
-        "steps": []
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position",
+                      "date_of_birth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "full-stack developer",
+                      "29.09.1987"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "full-stack developer",
+                      "29.09.1987"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "help desk",
+                      "29.09.1987"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "product manager",
+                      "29.09.1987"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the below employees are registered",
+            "result": {
+              "status": "passed",
+              "duration": 14344000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I navigate to EmployeesList",
+            "result": {
+              "status": "passed",
+              "duration": 144000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I edit the 1st employee",
+            "result": {
+              "status": "passed",
+              "duration": 528000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I input the employee's name: Eva",
+            "result": {
+              "status": "passed",
+              "duration": 285000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "Submit employee",
+            "result": {
+              "status": "passed",
+              "duration": 143000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eva",
+                      "Nolan",
+                      "Full-Stack Developer"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "Full-Stack Developer"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "Help Desk"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "Product Manager"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I see the belows employees in the list",
+            "result": {
+              "status": "passed",
+              "duration": 58000000
+            }
+          }
+        ]
       },
       {
         "id": "peoples-lead-can-update-employee's-registry;user-changes-the-work-position-of-an-existing-employee",
         "keyword": "Scenario",
-        "line": 5,
+        "line": 24,
         "name": "User changes the work position of an existing Employee",
         "tags": [],
         "type": "scenario",
-        "steps": []
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position",
+                      "date_of_birth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "full-stack developer",
+                      "29.09.1987"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "full-stack developer",
+                      "29.09.1987"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "help desk",
+                      "29.09.1987"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "product manager",
+                      "29.09.1987"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the below employees are registered",
+            "result": {
+              "status": "passed",
+              "duration": 173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "I navigate to EmployeesList",
+            "result": {
+              "status": "passed",
+              "duration": 144000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I edit the 1st employee",
+            "result": {
+              "status": "passed",
+              "duration": 517000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I select the employee's work_position: Front-End Developer",
+            "result": {
+              "status": "passed",
+              "duration": 480000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "Submit employee",
+            "result": {
+              "status": "passed",
+              "duration": 156000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "surname",
+                      "work_position"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Nolan",
+                      "Front-End Developer"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Greg",
+                      "Ebert",
+                      "Full-Stack Developer"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Harvey",
+                      "Walker",
+                      "Help Desk"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Estelle",
+                      "Sauer",
+                      "Product Manager"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I see the belows employees in the list",
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          }
+        ]
       }
     ]
   }
