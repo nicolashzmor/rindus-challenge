@@ -19,13 +19,13 @@ export class EmployeesNewComponent {
   constructor(
     protected store: Store,
     protected router: Router,
-    protected actions: Actions,
+    protected actions$: Actions,
     protected notifications: TuiNotificationsService) {
   }
 
 
   signUpCustomer(employee: Employee) {
-    this.actions.pipe(
+    this.actions$.pipe(
       ofAction(SignUpNewEmployeeSucceeded, SignUpNewEmployeeFailed),
       take(1)
     ).subscribe((action) => {

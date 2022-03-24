@@ -11,10 +11,13 @@ import {MockComponent} from "ng-mocks";
 import {TuiErrorComponent} from "@taiga-ui/core";
 import {ReactiveFormsModule} from "@angular/forms";
 import MockedFn = jest.MockedFn;
+import userEvent from "@testing-library/user-event";
+import {TuiDay} from "@taiga-ui/cdk";
 
 describe('EmployeeFormComponent', () => {
   let result: RenderResult<EmployeeFormComponent>
   let submitEmployeeEmitter: MockedFn<any>
+
   beforeEach(async () => {
     submitEmployeeEmitter = jest.fn()
     result = await render(EmployeeFormComponent, {
@@ -34,18 +37,18 @@ describe('EmployeeFormComponent', () => {
   })
 
   it('should emit an employee when submitted', () => {
-    // Too much implementation detail and dependencies here, but test validation behavior is important
     const form = result.fixture.componentInstance.EmployeeForm
 
     form.patchValue({
       name: 'Jeff',
       surname: 'Forin',
       work_position: 'full-stack developer',
-      date_of_birth: new Date().toISOString()
+      date_of_birth: TuiDay.fromLocalNativeDate(new Date())
     })
     form.updateValueAndValidity()
 
-    screen.getByText('Submit').click()
+    userEvent.click(screen.getByText('Submit'))
+
     expect(submitEmployeeEmitter).toHaveBeenCalled()
   })
 });

@@ -42,11 +42,14 @@ export class EmployeeFormComponent implements OnInit {
   }
 
   onSubmitEmployee() {
-    if (this.EmployeeForm.valid) return this.submitEmployee.emit(Employee.new({
-      ...this.EmployeeForm.value,
-      date_of_birth: this.EmployeeForm.value.date_of_birth.toUtcNativeDate()
-    }));
-    this.EmployeeForm.markAllAsTouched()
+    if (this.EmployeeForm.valid) {
+      this.submitEmployee.emit(Employee.new({
+        ...this.EmployeeForm.value,
+        date_of_birth: this.EmployeeForm.value.date_of_birth.toLocalNativeDate()
+      }));
+    } else {
+      this.EmployeeForm.markAllAsTouched()
+    }
   }
 
 }
