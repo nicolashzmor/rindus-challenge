@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import {LayoutModule} from "./components/layout/layout.module";
+import {StoreModule} from "./core/store/store.module";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {LayoutModule} from "./components/layout/layout.module";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    StoreModule,
     TuiRootModule,
     BrowserAnimationsModule,
     TuiDialogModule,

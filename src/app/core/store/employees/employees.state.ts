@@ -16,11 +16,13 @@ import UpdateEmployeeDataFailed = EmployeesEvents.UpdateEmployeeDataFailed;
 import SignOffEmployeeSucceeded = EmployeesEvents.SignOffEmployeeSucceeded;
 import SignOffEmployeeFailed = EmployeesEvents.SignOffEmployeeFailed;
 import FetchEmployees = EmployeesActions.FetchEmployees;
+import {Injectable} from "@angular/core";
 
 @State<EmployeesModels.State>({
   name: 'employees',
   defaults: []
 })
+@Injectable()
 export class EmployeesState {
 
   constructor(protected employees: EmployeesService) {
