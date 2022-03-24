@@ -10,4 +10,14 @@ export class EmployeesSelectors {
       return filterBy ? Employees.filter(Employee.searchByIndexableKeys(filterBy)) : Employees
     })
   }
+
+  public static GetEmployeeById(id: string | null): (state: EmployeesModels.State) => Employee | null {
+    return createSelector<(state: EmployeesModels.State) => Employee | null>([EmployeesState], ({employees}) => {
+      const stored = employees.find(e => e.id === id)
+      if (stored) {
+        return Employee.new(stored)
+      }
+      return null
+    })
+  }
 }

@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output}
 import {WorkPosition} from "../../../core/models/work-position.model";
 import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Employee} from "../../../core/models/employee.model";
+import {TuiDay} from "@taiga-ui/cdk";
 
 const RequiredWithError = (message: string) => (control: AbstractControl) => Validators.required(control) ? {required: message} : null
 
@@ -12,8 +13,9 @@ const RequiredWithError = (message: string) => (control: AbstractControl) => Val
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EmployeeFormComponent implements OnInit {
-  @Output() submitEmployee: EventEmitter<Employee> = new EventEmitter<Employee>()
   @Input() submitLabel: string = 'Submit'
+  @Input() employee!: Employee
+  @Output() submitEmployee: EventEmitter<Employee> = new EventEmitter<Employee>()
 
   public WorkPositionOptions = Object.entries(WorkPosition.Labels)
 
@@ -30,10 +32,20 @@ export class EmployeeFormComponent implements OnInit {
 
   ngOnInit(): void {
 
+    if (this.employee) {
+      const employeeData = this.employee.asUpdateDTO()
+      this.EmployeeForm.patchValue({
+        ...employeeData,
+        date_of_birth: TuiDay.fromLocalNativeDate(new Date(employeeData.date_of_birth))
+      })
+    }
   }
 
   onSubmitEmployee() {
-    if (this.EmployeeForm.valid) return this.submitEmployee.emit(Employee.new(this.EmployeeForm.value));
+    if (this.EmployeeForm.valid) return this.submitEmployee.emit(Employee.new({
+      ...this.EmployeeForm.value,
+      date_of_birth: this.EmployeeForm.value.date_of_birth.toUtcNativeDate()
+    }));
     this.EmployeeForm.markAllAsTouched()
   }
 

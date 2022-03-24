@@ -7,7 +7,7 @@ import {EmployeesEditComponent} from "./employees-edit/employees-edit.component"
 const routes: Routes = [
   {path: 'employees', component: EmployeesListComponent},
   {path: 'employees/new', component: EmployeesNewComponent},
-  {path: 'employees/:id', component: EmployeesEditComponent},
+  {path: 'employees/:employee_id', component: EmployeesEditComponent},
   {path: '**', redirectTo: 'employees', pathMatch: 'full'}
 ];
 

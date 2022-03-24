@@ -1,2 +1,2 @@
 <app-section-header title="Update Employee"></app-section-header>
-<app-employee-form></app-employee-form>
+<app-employee-form *ngIf="(employee$ | async) as employee" [employee]="employee" (submitEmployee)="updateEmployee($event)"></app-employee-form>
