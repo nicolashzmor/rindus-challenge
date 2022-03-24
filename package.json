@@ -36,6 +36,7 @@
     "@taiga-ui/core": "^2.38.0",
     "@taiga-ui/icons": "^2.38.0",
     "@taiga-ui/kit": "^2.38.0",
+    "@testing-library/user-event": "^13.5.0",
     "@tinkoff/ng-dompurify": "3.0.0",
     "dompurify": "2.2.9",
     "resolve": "^1.22.0",
