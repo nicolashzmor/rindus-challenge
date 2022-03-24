@@ -21,9 +21,12 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@ngxs/storage-plugin": "^3.7.3",
+    "@ngxs/store": "^3.7.3",
     "resolve": "^1.22.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "uuid": "^8.3.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -32,14 +35,17 @@
     "@angular/cli": "~13.3.0",
     "@angular/compiler-cli": "~13.3.0",
     "@cypress/schematic": "^1.6.0",
+    "@ngxs/devtools-plugin": "^3.7.3",
     "@types/cypress-cucumber-preprocessor": "^4.0.1",
     "@types/jest": "^27.4.1",
     "@types/node": "^12.11.1",
     "@types/resolve": "^1.20.1",
+    "@types/uuid": "^8.3.4",
     "cypress": "latest",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "jest": "^27.5.1",
     "jest-preset-angular": "^11.1.1",
+    "ng-mocks": "^13.2.0",
     "typescript": "~4.6.2"
   },
   "cypress-cucumber-preprocessor": {
