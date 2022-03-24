@@ -12,10 +12,10 @@ Feature: Peoples Lead Can Hire New Employee
 
     Examples:
       | name    | surname | work_position        | date_of_birth |
-      | Eve     | Nolan   | full-stack developer | 1987-09-29    |
-      | Greg    | Ebert   | full-stack developer | 1987-09-29    |
-      | Harvey  | Walker  | help desk            | 1987-09-29    |
-      | Estelle | Sauer   | product manager      | 1987-09-29    |
+      | Eve     | Nolan   | full-stack developer | 29.09.1987    |
+      | Greg    | Ebert   | full-stack developer | 29.09.1987    |
+      | Harvey  | Walker  | help desk            | 29.09.1987    |
+      | Estelle | Sauer   | product manager      | 29.09.1987    |
 
 
   Scenario: User sees an error in the data sheet, and want to cancel the process before finishing

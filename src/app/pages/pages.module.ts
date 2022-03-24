@@ -9,13 +9,15 @@ import {LayoutModule} from "../components/layout/layout.module";
 import {TuiInputModule, TuiIslandModule} from "@taiga-ui/kit";
 import {TuiButtonModule, TuiPrimitiveTextfieldModule, TuiTextfieldControllerModule} from "@taiga-ui/core";
 import {EmployeesModule} from "../components/employees/employees.module";
+import { ResetComponent } from './reset/reset.component';
 
 
 @NgModule({
   declarations: [
     EmployeesListComponent,
     EmployeesNewComponent,
-    EmployeesEditComponent
+    EmployeesEditComponent,
+    ResetComponent
   ],
     imports: [
         CommonModule,
