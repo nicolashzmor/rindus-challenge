@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from "@ngxs/store";
 import {EmployeesSelectors} from "../../core/store/employees/employees.selectors";
+import {EmployeesActions} from "../../core/store/employees/employees.actions";
+import UpdateFilterBy = EmployeesActions.UpdateFilterBy;
 
 @Component({
   selector: 'app-employees-list',
@@ -14,6 +16,10 @@ export class EmployeesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  filterEmployees(filterBy: string){
+    this.store.dispatch(new UpdateFilterBy(filterBy))
   }
 
 }

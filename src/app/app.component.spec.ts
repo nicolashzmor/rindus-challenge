@@ -1,22 +1,17 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {render, RenderResult} from "@testing-library/angular";
+import {MockProvider} from "ng-mocks";
+import {Store} from "@ngxs/store";
 
 describe('AppComponent', () => {
+  let result: RenderResult<AppComponent>
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+    result = await render(AppComponent, {
+      providers: [MockProvider(Store)]
+    })
+  })
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  it('should render', () => {
+    expect(result.fixture.componentInstance).toBeTruthy()
+  })
 });

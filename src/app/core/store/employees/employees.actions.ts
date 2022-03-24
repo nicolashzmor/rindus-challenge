@@ -5,6 +5,7 @@ export namespace EmployeesActions {
     // THIS WON'T FO ANYTHING AS ALL STAT IS MANAGED LOCALLY
     public static type = '[EMPLOYEES] Fetch Employees'
   }
+
   export class ResetEmployeesDatabase {
     // THIS ACTION IS ONLY FOR TESTING PURPOSES BECAUSE LACK OF DB
     public static type = '[EMPLOYEES] Reset Employees Database'
@@ -28,6 +29,16 @@ export namespace EmployeesActions {
     public static type = '[EMPLOYEES] Sign Off Employee'
 
     constructor(public employee: Employee, public verification: string) {
+    }
+  }
+
+  export class UpdateFilterBy {
+    public static type = '[EMPLOYEES] Update Filter By'
+
+    public filterBy: string | null
+
+    constructor(filterBy: string) {
+      this.filterBy = filterBy || null
     }
   }
 

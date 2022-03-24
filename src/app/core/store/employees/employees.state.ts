@@ -17,6 +17,7 @@ import UpdateEmployeeDataFailed = EmployeesEvents.UpdateEmployeeDataFailed;
 import SignOffEmployeeSucceeded = EmployeesEvents.SignOffEmployeeSucceeded;
 import SignOffEmployeeFailed = EmployeesEvents.SignOffEmployeeFailed;
 import FetchEmployees = EmployeesActions.FetchEmployees;
+import UpdateFilterBy = EmployeesActions.UpdateFilterBy;
 
 @State<EmployeesModels.State>({
   name: 'employees',
@@ -87,5 +88,10 @@ export class EmployeesState {
       return ctx.dispatch(SignOffEmployeeFailed)
     }
 
+  }
+
+  @Action(UpdateFilterBy)
+  onUpdateFilterBy(ctx: StateContext<EmployeesModels.State>, {filterBy}: UpdateFilterBy) {
+    ctx.patchState({filterBy})
   }
 }
