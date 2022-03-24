@@ -11,7 +11,7 @@
   <tr data-testid="table__row" *tuiRow="let employee of employees; let employee_index = index" tuiTr>
     <td *tuiCell="'full_name'" tuiTd>{{ employee.full_name }}</td>
     <td *tuiCell="'work_position'" tuiTd>
-      {{ employee.work_position.position }}
+      <app-work-position-table-label [position]="employee.work_position"></app-work-position-table-label>
     </td>
     <td *tuiCell="'date_of_birth'" tuiTd>
       {{ employee.date_of_birth | date : 'yyyy-mm-dd' }}

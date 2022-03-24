@@ -13,13 +13,15 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { EmployeesTableComponent } from './employees-table/employees-table.component';
 import {TuiTableModule} from "@taiga-ui/addon-table";
 import {RouterModule} from "@angular/router";
+import { WorkPositionTableLabelComponent } from './work-position-table-label/work-position-table-label.component';
 
 
 
 @NgModule({
   declarations: [
     SearchAndAddActionBarComponent,
-    EmployeesTableComponent
+    EmployeesTableComponent,
+    WorkPositionTableLabelComponent
   ],
   exports: [
     SearchAndAddActionBarComponent,
