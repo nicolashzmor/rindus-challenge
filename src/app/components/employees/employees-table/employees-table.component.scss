@@ -4,6 +4,9 @@
     border-collapse: separate;
     border-spacing: 0 0.5em;
     font-size: 18px;
+    th, td {
+      padding: 0 1.5em;
+    }
     th {
       font-weight: 500;
       ::ng-deep .t-sort {
@@ -14,11 +17,10 @@
       border-radius: 4px;
       box-shadow: 0 4px 10px rgba(155, 157, 158, 0.25);
     }
-
     td {
       border: none;
       height: 86px;
-      font-size: 18px;
+      font-size: 0.9em;
     }
   }
 

@@ -14,7 +14,7 @@
       <app-work-position-table-label [position]="employee.work_position"></app-work-position-table-label>
     </td>
     <td *tuiCell="'date_of_birth'" tuiTd>
-      {{ employee.date_of_birth | date : 'yyyy-mm-dd' }}
+      {{ employee.date_of_birth | date : 'd MMM, y' }}
     </td>
     <td class="table__column--actions" *tuiCell="'actions'" tuiTd>
       <tui-hosted-dropdown [content]="actions">
