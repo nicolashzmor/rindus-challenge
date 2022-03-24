@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  .sign-off-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__notice {
+      .title {
+        margin: 0;
+        font-size: 2em;
+      }
+    }
+
+    &__confirmation-field {
+      align-items: stretch;
+    }
+
+    &__submit {
+      align-items: center;
+
+      button {
+        width: 100%;
+        max-width: 380px;
+      }
+    }
+  }
+
+  .sign-off-field {
+    &__label {
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #5c636b;
+
+      tui-input {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}

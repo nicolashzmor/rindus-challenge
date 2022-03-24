@@ -1,0 +1,21 @@
+<section class="sign-off-section sign-off-section__notice">
+  <h2 class="title">You are signin off an employee</h2>
+  <p>This action <b>cannot</b> be undone. This will permanently delete <span>{{ employee.full_name }}</span>. Once this
+    action is done,
+    we will not be able to recover the data of this employee.</p>
+</section>
+<section class="sign-off-section sign-off-section__confirmation-field">
+  <label tuiLabel class="sign-off-field__label">
+    Please, type <em>{{employee.full_name}}</em> to confirm sign-off
+    <tui-input [formControl]="verification" [tuiTextfieldLabelOutside]="true" tuiTextfieldSize="m">
+      Type employee's name
+      <input tuiTextfield type="text" placeholder="Type employee's name">
+    </tui-input>
+  </label>
+</section>
+
+<section class="sign-off-section sign-off-section__submit">
+  <button (click)="submitSignOff()" tuiButton size="m">Sign-off Employee</button>
+</section>
+
+

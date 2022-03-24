@@ -2,9 +2,14 @@
   table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 1em;
+    border-spacing: 0 0.5em;
     font-size: 18px;
-
+    th {
+      font-weight: 500;
+      ::ng-deep .t-sort {
+        font-weight: 500;
+      }
+    }
     tr {
       border-radius: 4px;
       box-shadow: 0 4px 10px rgba(155, 157, 158, 0.25);
