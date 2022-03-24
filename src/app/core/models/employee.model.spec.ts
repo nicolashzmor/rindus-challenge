@@ -1,4 +1,5 @@
 import {Employee} from "./employee.model";
+import {EmployeesDatabase} from "../store/employees/employees.values";
 
 describe('Employee Model', function () {
   const ValidPersistedEmployeeBuilder = () => Employee.new({
@@ -56,5 +57,10 @@ describe('Employee Model', function () {
     expect(() => employee.asUpdateDTO()).toThrowError("Cannot generate an UpdateDTO. User does not have a registered ID.")
   })
 
+  it('should filter by value', () => {
+    const employees = EmployeesDatabase.map(e => Employee.new(e))
+    const result = employees.filter(Employee.searchByIndexableKeys('Eve No'))
+    expect(result).toHaveLength(1)
+  })
 
 });

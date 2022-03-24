@@ -53,6 +53,13 @@ export class Employee {
     return new this(employee_data)
   }
 
+  public static searchByIndexableKeys(searchValue: string): (employee: Employee) => boolean {
+    return (employee: Employee) => {
+      const indexes = [employee.name, employee.surname, employee.full_name, employee.work_position.position, employee.work_position.label].join('||').toLowerCase()
+      return indexes.indexOf(searchValue.trim().toLowerCase()) > -1
+    }
+  }
+
   public isUnsignedEmployee() {
     return this.id === UNSIGNED_EMPLOYEE
   }
