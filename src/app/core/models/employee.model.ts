@@ -41,6 +41,10 @@ export class Employee {
     this.date_of_birth = new Date(employee_data.date_of_birth)
   }
 
+  get full_name() {
+    return this.name + ' ' + this.surname
+  }
+
   public static new(employee_data: EmployeeData) {
     const employee_validation = new EmployeeConstructionValidator().validate(employee_data)
     if (!employee_validation.isValid) {
