@@ -1,6 +1,13 @@
 import {Employee} from "./employee.model";
 
 describe('Employee Model', function () {
+  const ValidPersistedEmployeeBuilder = () => Employee.new({
+    id: 'f59d143d-c206-4bbc-b79a-a7d8dcbedea0',
+    name: 'Eve',
+    surname: 'Nolan',
+    work_position: 'full-stack developer',
+    date_of_birth: '1987-09-29'
+  })
   const ValidEmployeeBuilder = () => Employee.new({
     name: 'Eve',
     surname: 'Nolan',
@@ -23,13 +30,24 @@ describe('Employee Model', function () {
     expect(InvalidEmployeeBuilder).toThrowError("Employee couldn't be created. Failed: work_position, name, surname, date_of_birth")
   })
 
-  it('should return a createDTO', () => {
+  it('should return a DTO for creating a customer', () => {
     const employee = ValidEmployeeBuilder()
     expect(employee.asCreateDTO()).toEqual({
       name: 'Eve',
       surname: 'Nolan',
       work_position: 'full-stack developer',
-      date_of_birth: 'Mon Sep 28 1987'
+      date_of_birth: '1987-09-29T00:00:00.000Z'
+    })
+  })
+
+  it('should return a DTO for updating a customer', () => {
+    const employee = ValidPersistedEmployeeBuilder()
+    expect(employee.asUpdateDTO()).toEqual({
+      id: 'f59d143d-c206-4bbc-b79a-a7d8dcbedea0',
+      name: 'Eve',
+      surname: 'Nolan',
+      work_position: 'full-stack developer',
+      date_of_birth: '1987-09-29T00:00:00.000Z'
     })
   })
 
@@ -37,4 +55,6 @@ describe('Employee Model', function () {
     const employee = ValidEmployeeBuilder()
     expect(() => employee.asUpdateDTO()).toThrowError("Cannot generate an UpdateDTO. User does not have a registered ID.")
   })
+
+
 });

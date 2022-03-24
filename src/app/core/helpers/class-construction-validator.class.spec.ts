@@ -5,6 +5,7 @@ class TestClass extends ClassConstructionValidator<{ name: string }> {
     if (name !== 'Nicolas') {
       this.fail('name', 'Invalid mail. Expected Nicolas.')
     }
+    this.log()
     return this;
   }
 }
@@ -22,6 +23,12 @@ describe('Class Construction Validator', function () {
   })
   it('should return an error "Invalid mail. Expected Nicolas."', () => {
     expect(new TestClass().validate("Jeff").errors["name"]).toBe("Invalid mail. Expected Nicolas.")
+  })
+
+  it('should log errors', () => {
+    const errorLogSpy = jest.spyOn(console, 'error')
+    new TestClass().validate("Jeff").errors["name"]
+    expect(errorLogSpy).toHaveBeenCalled()
   })
 
 });

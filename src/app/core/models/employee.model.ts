@@ -58,7 +58,7 @@ export class Employee {
       name: this.name,
       surname: this.surname,
       work_position: this.work_position.position,
-      date_of_birth: this.date_of_birth.toDateString()
+      date_of_birth: this.date_of_birth.toISOString()
     }
   }
 
@@ -72,8 +72,13 @@ export class Employee {
       name: this.name,
       surname: this.surname,
       work_position: this.work_position.position,
-      date_of_birth: this.date_of_birth.toDateString()
+      date_of_birth: this.date_of_birth.toISOString()
     }
+  }
+
+  public signOffVerification(verification_input: string) {
+    return verification_input === `${this.name} ${this.surname}`
+
   }
 
 }
