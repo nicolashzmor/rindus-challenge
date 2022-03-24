@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+
+  tui-island {
+    padding: 50px;
+  }
+  form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 528px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em
+  }
+}
