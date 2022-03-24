@@ -5,6 +5,7 @@ import {EmployeeCreateDTO, EmployeeUpdateDTO} from "../../models/employee.model"
 import {v4 as uuid4} from 'uuid'
 import {Observable, of} from "rxjs";
 import {EmployeesModels} from "./employees.models";
+import {EmployeesDatabase} from "./employees.values";
 import StoredEmployee = EmployeesModels.StoredEmployee;
 
 @Injectable({
@@ -15,6 +16,10 @@ export class EmployeesService {
   public static API_URL = `${environment.api_url}/employees`
 
   constructor(protected http: HttpClient) {
+  }
+
+  fetchEmployees() {
+    return of(EmployeesDatabase)
   }
 
   signUpEmployee(employee: EmployeeCreateDTO): Observable<StoredEmployee> {

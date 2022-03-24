@@ -5,6 +5,7 @@ import {EmployeesDatabase} from "./employees.values";
 import {EmployeesService} from "./employees.service";
 import {catchError, concatMap, tap} from "rxjs/operators";
 import {EmployeesEvents} from "./employees.events";
+import {Injectable} from "@angular/core";
 import ResetEmployeesDatabase = EmployeesActions.ResetEmployeesDatabase;
 import SignUpNewEmployee = EmployeesActions.SignUpNewEmployee;
 import UpdateEmployeeData = EmployeesActions.UpdateEmployeeData;
@@ -16,11 +17,13 @@ import UpdateEmployeeDataFailed = EmployeesEvents.UpdateEmployeeDataFailed;
 import SignOffEmployeeSucceeded = EmployeesEvents.SignOffEmployeeSucceeded;
 import SignOffEmployeeFailed = EmployeesEvents.SignOffEmployeeFailed;
 import FetchEmployees = EmployeesActions.FetchEmployees;
-import {Injectable} from "@angular/core";
 
 @State<EmployeesModels.State>({
   name: 'employees',
-  defaults: []
+  defaults: {
+    employees: [],
+    filterBy: null
+  }
 })
 @Injectable()
 export class EmployeesState {
@@ -28,9 +31,16 @@ export class EmployeesState {
   constructor(protected employees: EmployeesService) {
   }
 
+  @Action(FetchEmployees)
+  onFetchEmployees(ctx: StateContext<EmployeesModels.State>) {
+    return this.employees.fetchEmployees().pipe(
+      tap((employees) => ctx.patchState({employees}))
+    )
+  }
+
   @Action(ResetEmployeesDatabase)
   onResetEmployeesDatabase(ctx: StateContext<EmployeesModels.State>) {
-    return ctx.patchState(EmployeesDatabase)
+    return ctx.patchState({employees: EmployeesDatabase})
   }
 
   @Action(SignUpNewEmployee)
@@ -38,9 +48,9 @@ export class EmployeesState {
     try {
       const employeeDTO = employee.asCreateDTO()
       return this.employees.signUpEmployee(employeeDTO).pipe(
-        tap(employee => ctx.patchState([...ctx.getState(), employee])),
+        tap(employee => ctx.patchState({employees: [...ctx.getState().employees, employee]})),
         concatMap(() => ctx.dispatch(SignUpNewEmployeeSucceed)),
-        concatMap(() => ctx.dispatch(FetchEmployees)),
+        // concatMap(() => ctx.dispatch(FetchEmployees)),
         catchError(() => ctx.dispatch(SignUpNewEmployeeFailed))
       )
     } catch (e) {
@@ -53,9 +63,9 @@ export class EmployeesState {
     try {
       const employeeDTO = employee.asUpdateDTO()
       return this.employees.updateEmployeeData(employeeDTO).pipe(
-        tap(employee => ctx.patchState([...ctx.getState().filter(e => e.id === employee.id), employee])),
+        tap(employee => ctx.patchState({employees: [...ctx.getState().employees.filter(e => e.id !== employee.id), employee]})),
         concatMap(() => ctx.dispatch(UpdateEmployeeDataSucceeded)),
-        concatMap(() => ctx.dispatch(FetchEmployees)),
+        // concatMap(() => ctx.dispatch(FetchEmployees)),
         catchError(() => ctx.dispatch(UpdateEmployeeDataFailed))
       )
     } catch (e) {
@@ -68,9 +78,9 @@ export class EmployeesState {
     const verified = employee.signOffVerification(verification)
     if (verified) {
       return this.employees.signOffEmployee(employee.id.toString()).pipe(
-        tap(employee_id => ctx.patchState([...ctx.getState().filter(e => e.id === employee_id)])),
+        tap(employee_id => ctx.patchState({employees: ctx.getState().employees.filter(e => e.id !== employee_id)})),
         concatMap(() => ctx.dispatch(SignOffEmployeeSucceeded)),
-        concatMap(() => ctx.dispatch(FetchEmployees)),
+        // concatMap(() => ctx.dispatch(FetchEmployees)),
         catchError(() => ctx.dispatch(SignOffEmployeeFailed))
       )
     } else {

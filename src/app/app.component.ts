@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Store} from "@ngxs/store";
+import {EmployeesActions} from "./core/store/employees/employees.actions";
+import FetchEmployees = EmployeesActions.FetchEmployees;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ibillboard-users';
+  constructor(protected store: Store) {
+  }
+
+  ngOnInit() {
+    this.store.dispatch(FetchEmployees)
+  }
 }

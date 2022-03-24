@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {EmployeesDatabase} from "../../core/store/employees/employees.values";
-import {Employee} from "../../core/models/employee.model";
+import {Store} from "@ngxs/store";
+import {EmployeesSelectors} from "../../core/store/employees/employees.selectors";
 
 @Component({
   selector: 'app-employees-list',
@@ -8,9 +8,9 @@ import {Employee} from "../../core/models/employee.model";
   styleUrls: ['./employees-list.component.scss']
 })
 export class EmployeesListComponent implements OnInit {
-  employees = EmployeesDatabase.map(e => Employee.new(e))
+  public employees$ = this.store.select(EmployeesSelectors.GetEmployees())
 
-  constructor() {
+  constructor(protected store: Store) {
   }
 
   ngOnInit(): void {
