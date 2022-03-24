@@ -1,8 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('http://fonts.cdnfonts.com/css/museo-sans-rounded');
 
+$font-family: 'Museo Sans Rounded', sans-serif;
+
+:root {
+  --tui-heading-font: $font-family;
+  --tui-text-font: $font-family;
+
+  // COLORS
+  --tui-primary: #E22017;
+  --tui-primary-active: #a11913;
+  --tui-primary-hover: #ec342c;
+}
+
 body {
-  font-family: 'Museo Sans Rounded', sans-serif;
+  font-family: $font-family;
   font-weight: 500;
   background-color: #DDDFE0;
 }
