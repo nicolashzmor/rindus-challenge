@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EmployeesDatabase} from "../../core/store/employees/employees.values";
+import {Employee} from "../../core/models/employee.model";
 
 @Component({
   selector: 'app-employees-list',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employees-list.component.scss']
 })
 export class EmployeesListComponent implements OnInit {
+  employees = EmployeesDatabase.map(e => Employee.new(e))
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

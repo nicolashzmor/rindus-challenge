@@ -1,0 +1,15 @@
+:host {
+  .employees-list {
+    &__actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+      gap: 1em;
+    }
+    &__search-input {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}

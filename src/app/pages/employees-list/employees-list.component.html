@@ -1,1 +1,6 @@
-<p>employees-list works!</p>
+<app-section-header title="Employees">
+  <app-search-and-add-action-bar></app-search-and-add-action-bar>
+</app-section-header>
+<section class="employee-list__content">
+  <app-employees-table [employees]="employees"></app-employees-table>
+</section>

@@ -1,0 +1,42 @@
+:host {
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    font-size: 18px;
+
+    tr {
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(155, 157, 158, 0.25);
+    }
+
+    td {
+      border: none;
+      height: 86px;
+      font-size: 18px;
+    }
+  }
+
+  .table {
+    &__header--actions {
+      width: 0;
+    }
+
+    &__column--actions {
+      text-align: center;
+    }
+  }
+
+
+}
+
+.table-actions-menu {
+  width: 180px;
+  box-sizing: border-box;
+
+  &__option {
+    padding: 1em 2em;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+}
