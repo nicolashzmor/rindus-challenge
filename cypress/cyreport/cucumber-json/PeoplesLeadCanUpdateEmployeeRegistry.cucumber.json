@@ -67,7 +67,7 @@
             "name": "the below employees are registered",
             "result": {
               "status": "passed",
-              "duration": 14344000000
+              "duration": 12737000000
             }
           },
           {
@@ -87,7 +87,7 @@
             "name": "I edit the 1st employee",
             "result": {
               "status": "passed",
-              "duration": 528000000
+              "duration": 519000000
             }
           },
           {
@@ -97,7 +97,7 @@
             "name": "I input the employee's name: Eva",
             "result": {
               "status": "passed",
-              "duration": 285000000
+              "duration": 300000000
             }
           },
           {
@@ -107,7 +107,7 @@
             "name": "Submit employee",
             "result": {
               "status": "passed",
-              "duration": 143000000
+              "duration": 152000000
             }
           },
           {
@@ -157,7 +157,7 @@
             "name": "I see the belows employees in the list",
             "result": {
               "status": "passed",
-              "duration": 58000000
+              "duration": 55000000
             }
           }
         ]
@@ -222,7 +222,7 @@
             "name": "the below employees are registered",
             "result": {
               "status": "passed",
-              "duration": 173000000
+              "duration": 182000000
             }
           },
           {
@@ -242,7 +242,7 @@
             "name": "I edit the 1st employee",
             "result": {
               "status": "passed",
-              "duration": 517000000
+              "duration": 514000000
             }
           },
           {
@@ -252,7 +252,7 @@
             "name": "I select the employee's work_position: Front-End Developer",
             "result": {
               "status": "passed",
-              "duration": 480000000
+              "duration": 466000000
             }
           },
           {
@@ -262,7 +262,7 @@
             "name": "Submit employee",
             "result": {
               "status": "passed",
-              "duration": 156000000
+              "duration": 159000000
             }
           },
           {

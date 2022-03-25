@@ -1,27 +1,21 @@
-# IbillboardUsers
+# IBillboard Users
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+The project is made with Angular with Testing Suites in both Cypress + Cucumber and Jest
 
-## Development server
+## Serve
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Serve: npm run serve
 
-## Code scaffolding
+## Tests
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Jest Testing: npm run test
 
-## Build
+E2E Testing: npm run e2e
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Comments
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* The project was made with no real connection to an API. 
+* There are comments on how connections would have been made.
+* The requirement defined an API to fetch the work_positions. 
+  * In order to make a more robust Model of WorkPosition, the data was used statically instead of fetching it dynamically.
+  * Although may be possible to do it dynamically, the reason behind this decision is to make explicit choices when a new WorkPosition is added to the list, as there are dependencies that weren't defined on the provided services (e.g. a formatted label). This decision promotes a controlled complexity increase and provides a more scalable solution. 

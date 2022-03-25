@@ -67,7 +67,7 @@
             "name": "the below employees are registered",
             "result": {
               "status": "passed",
-              "duration": 11743000000
+              "duration": 9943000000
             }
           },
           {
@@ -77,7 +77,7 @@
             "name": "I navigate to EmployeesList",
             "result": {
               "status": "passed",
-              "duration": 145000000
+              "duration": 152000000
             }
           },
           {
@@ -87,7 +87,7 @@
             "name": "I remove the 1st user on the list",
             "result": {
               "status": "passed",
-              "duration": 500000000
+              "duration": 507000000
             }
           },
           {
@@ -97,7 +97,7 @@
             "name": "Confirm Remove Operation by Input User's Name: \"Eve Nolan\"",
             "result": {
               "status": "passed",
-              "duration": 498000000
+              "duration": 558000000
             }
           },
           {
@@ -136,7 +136,7 @@
             "name": "I see the belows employees in the list",
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 30000000
             }
           }
         ]
@@ -201,7 +201,7 @@
             "name": "the below employees are registered",
             "result": {
               "status": "passed",
-              "duration": 176000000
+              "duration": 186000000
             }
           },
           {
@@ -211,7 +211,7 @@
             "name": "I navigate to EmployeesList",
             "result": {
               "status": "passed",
-              "duration": 143000000
+              "duration": 147000000
             }
           },
           {
@@ -221,7 +221,7 @@
             "name": "I remove the 1st user on the list",
             "result": {
               "status": "passed",
-              "duration": 511000000
+              "duration": 493000000
             }
           },
           {
@@ -231,7 +231,7 @@
             "name": "Confirm Remove Operation by Input User's Name: \"Greg Ebert\"",
             "result": {
               "status": "passed",
-              "duration": 435000000
+              "duration": 559000000
             }
           },
           {
@@ -276,7 +276,7 @@
             "name": "I see the belows employees in the list",
             "result": {
               "status": "passed",
-              "duration": 43000000
+              "duration": 39000000
             }
           }
         ]
